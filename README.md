@@ -50,15 +50,13 @@ With `gcloud` installed and the proper APIs configured, you're ready to go.
 
 1. Create a Cloud SQL database:
 
-        $ gcloud sql instances create $DB_NAME \
-          --assign-ip \
-          --authorized-networks "0.0.0.0/0" \
-          --gce-zone us-central1-f \
-          --pricing-plan PACKAGE \
-          --require-ssl \
-          --replication SYNCHRONOUS \
-          --quiet \
-          --tier D1
+       gcloud sql instances create $DB_NAME \
+   --assign-ip \
+   --authorized-networks "0.0.0.0/0" \
+   --zone us-central1-f \
+   --require-ssl \
+   --replication SYNCHRONOUS \
+   --quiet 
 
 1. Set the root password for your database:
 
